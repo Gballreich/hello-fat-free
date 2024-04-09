@@ -11,7 +11,10 @@ $f3 = Base::instance();
 
 //define default root
 $f3->route('GET /', function() {
-    echo '<h1>Hello Fat-Free!</h1>';
+
+    //echo '<h1>Hello Fat-Free!</h1>';
+    $view = new Template();
+    echo $view->render('views/home.html');
 });
 
 //run fat-free
